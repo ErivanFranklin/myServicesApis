@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="item-a">
+        <mat-card class="card-search">
+          <mat-card-content class="searchs-content" id="grid-overflow">
+            <mat-list role="list">
+              <mat-list-item role="listitem" *ngFor="let message of cardMessages">
+                <mat-card class="{{message.style}}-card">
+                  <span>{{message.text}}</span>
+                </mat-card>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+          <mat-card-actions>
+              <button mat-raised-button ([searchActivated])="searchActivated" (click)="searchActivated = 'user'">Users</button>
+              <button mat-raised-button ([searchActivated])="searchActivated" (click)="searchActivated = 'hashtag'">Hashtag</button>
+              <button mat-raised-button ([searchActivated])="searchActivated" (click)="searchActivated = 'location'">Location</button>
+            <div>
+              <mat-form-field class="search-form">
+                  <input class="input-full-width" matInput #message placeholder="Serch by {{searchActivated}}"  (keyup.enter)="search(txtSearch)" [(ngModel)]="txtSearch">
+              </mat-form-field>
+            </div>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="item-b">
+        <app-google-autocomplete></app-google-autocomplete>
+    </div>
+    <div class="item-c">
+      <p>item C</p>
+    </div>
+    <div class="item-d">
+          <mat-card class="flex-item" *ngFor="let image of [1,2,3,4,5,6,7,8,9]">{{image}}</mat-card>
+    </div>
+</div>
+
+

@@ -1,0 +1,120 @@
+.container{
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 30% 70%;
+  -ms-grid-column: 30% 70%;
+  -ms-grid-rows: auto 450px auto;
+  grid-template-rows: auto 450px auto;
+  div{
+    padding: 10px;
+  }
+}
+
+.item-a {
+  -ms-grid-column: 1;
+  -ms-grid-row: row1-start;
+  grid-column-start: 1;
+  grid-column-end: span 1;
+  grid-row-start: row1-start;
+  grid-row-end: span 1;
+  position: sticky;
+  top: 0px;
+}
+
+.item-b {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  position: sticky;
+  top: 0px;
+  z-index: 200;
+}
+
+.item-c {
+  -ms-grid-column: 1;
+  -ms-grid-row: 3;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: span 4;
+}
+
+
+.item-d {
+  // background: purple;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  grid-column-start: 2;
+  grid-row-start: 2;
+  grid-row-end: span 4;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+
+.message-card{
+  padding: 10px;
+  grid-row: auto;
+  border-radius: 15px 15px 15px 0px;
+  background: lightblue;
+}
+
+.tag-card{
+  margin-left: 150px;
+  padding: 10px;
+  border-radius: 15px 15px 0px 15px;
+  background: #efefef;
+}
+
+
+.searchs-content{
+  min-height: 300px;
+  max-height: 300px;
+  overflow: auto;
+}
+
+.card-search{
+  border-radius: 10px;
+}
+
+.search-form {
+  margin-top: 5px;
+  width: 100%;
+}
+
+.input-full-width {
+  width: 100%;
+}
+
+.flex-item {
+  padding: 5px;
+  width: 200px;
+  height: 250px;
+  margin-top: 10px;
+  line-height: 150px;
+}
+
+/** style of scrool **/
+#grid-overflow::-webkit-scrollbar
+{
+  width: 12px;
+}
+
+#grid-overflow::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+}
+
+#grid-overflow::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(to left, #fff, #e4e4e4);
+  border: 1px solid #aaa;
+}
+
+#grid-overflow::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+#grid-overflow::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(to left, #22ADD4, #1E98BA);
+}

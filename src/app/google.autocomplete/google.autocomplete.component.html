@@ -1,0 +1,17 @@
+<mat-card>
+  <!-- <form class="example-form"> -->
+    <!-- <mat-form-field class="example-full-width"> -->
+        <!-- <input matInput placeholder="search for location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"  #search [formControl]="searchControl">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option>
+                <img style="vertical-align:middle;" aria-hidden src="http://vectorlogo4u.com/wp-content/uploads/2016/05/angular-icon-vector.png" height="25" />
+                <span>Erivan Franklin da Silva</span> |
+                <small>Web Developer: ecanvasser</small>
+            </mat-option>
+        </mat-autocomplete> -->
+    <!-- </mat-form-field> -->
+  <!-- </form> -->
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  </agm-map>
+</mat-card>
